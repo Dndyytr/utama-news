@@ -1,7 +1,9 @@
 // scroling
 document.addEventListener("DOMContentLoaded", function () {
   // Seleksi semua elemen yang akan dianimasikan berdasarkan kelas dan ID
-  const elements = document.querySelectorAll(".judul-home, .p-home, .more-btn");
+  const elements = document.querySelectorAll(
+    ".judul-home, .p-home, .more-btn, .judul-konten"
+  );
 
   // Membuat instance IntersectionObserver
   const observer = new IntersectionObserver(
