@@ -10,7 +10,7 @@
 
 body {
   font-family: "Poppins", sans-serif, Arial, Helvetica, sans-serif;
-  background-color: rgb(158, 158, 158);
+  background-color: rgb(168, 168, 168);
 }
 
 header {
@@ -131,7 +131,8 @@ header #hamburger:hover {
   opacity: 0;
   color: white;
   text-shadow: 0 0 6px black;
-  font-weight: 500;
+  font-weight: 700;
+  -webkit-text-stroke: 0.5px black;
 }
 
 #beranda article .more-btn[data-animated="true"] {
@@ -177,12 +178,10 @@ header #hamburger:hover {
   overflow: hidden;
   opacity: 0;
   transition: 0.8s;
-}
-.slider .list .item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: contrast(1.3);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  filter: contrast(1.23);
 }
 
 .slider .list .item::after {
@@ -267,11 +266,11 @@ header #hamburger:hover {
 }
 
 .judul-konten[data-animated="true"] {
-  animation: judul 1s ease forwards;
+  animation: judul 0.8s ease forwards;
 }
 
 #tentang article h2 {
-  font-size: 1rem;
+  font-size: 1.2rem;
   text-align: center;
   line-height: 6rem;
   color: black;
@@ -314,6 +313,71 @@ header #hamburger:hover {
     font-size: 1.3rem;
     color: rgb(0, 95, 86);
   }
+}
+
+/* artikel */
+#artikel h2 {
+  opacity: 0;
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 1.2rem;
+  span {
+    color: red;
+  }
+}
+
+#artikel .berita.tiga figure {
+  width: 200rem;
+}
+#artikel .berita.lima figure {
+  width: 350rem;
+}
+
+#artikel .berita {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 2rem;
+
+  figure {
+    width: 300rem;
+    height: 100%;
+    margin-top: 0.5rem;
+    overflow: hidden;
+    box-shadow: 2px 3px 5px black;
+    display: flex;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      filter: contrast(1.2);
+      transition: 0.5s;
+    }
+
+    img:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  h3 {
+    font-weight: 700;
+    font-size: 1.2rem;
+
+    span {
+      color: rgb(0, 46, 39);
+    }
+  }
+
+  p {
+    font-weight: 500;
+    text-align: justify;
+    font-size: 0.9rem;
+  }
+}
+
+.berita .isi-berita {
+  box-shadow: 4px 5px 5px black;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
 }
 
 /* media queris */
@@ -365,6 +429,14 @@ header #hamburger:hover {
   #beranda article p {
     font-size: 0.9rem;
   }
+
+  #artikel .berita h3 {
+    font-size: 0.8rem;
+  }
+
+  #artikel .berita p {
+    font-size: 0.7rem;
+  }
 }
 
 @media screen and (max-width: 575px) {
@@ -415,6 +487,24 @@ header #hamburger:hover {
       }
     }
   }
+
+  #artikel h2 {
+    font-size: 0.9rem;
+  }
+
+  #artikel .berita {
+    flex-direction: column;
+
+    figure {
+      width: 20rem;
+      margin: auto;
+    }
+  }
+
+  #artikel .berita.tiga figure,
+  #artikel .berita.lima figure {
+    width: 20rem;
+  }
 }
 
 @media screen and (max-width: 470px) {
@@ -459,6 +549,23 @@ header #hamburger:hover {
         font-size: 0.55rem;
       }
     }
+  }
+
+  #artikel .berita figure {
+    width: 17rem;
+  }
+
+  #artikel .berita.tiga figure,
+  #artikel .berita.lima figure {
+    width: 17rem;
+  }
+
+  #artikel .berita h3 {
+    font-size: 0.7rem;
+  }
+
+  #artikel .berita p {
+    font-size: 0.6rem;
   }
 }
 
@@ -525,6 +632,27 @@ header #hamburger:hover {
       }
     }
   }
+
+  #artikel h2 {
+    font-size: 0.8rem;
+  }
+
+  #artikel .berita figure {
+    width: 15rem;
+  }
+
+  #artikel .berita.tiga figure,
+  #artikel .berita.lima figure {
+    width: 15rem;
+  }
+
+  #artikel .berita h3 {
+    font-size: 0.6rem;
+  }
+
+  #artikel .berita p {
+    font-size: 0.5rem;
+  }
 }
 @media screen and (max-width: 320px) {
   header nav li {
@@ -580,10 +708,20 @@ header #hamburger:hover {
           font-size: 0.6rem;
         }
       }
-      p {
-        font-size: 0.4rem;
-      }
     }
+  }
+
+  #artikel h2 {
+    font-size: 0.7rem;
+  }
+
+  #artikel .berita figure {
+    width: 13rem;
+  }
+
+  #artikel .berita.tiga figure,
+  #artikel .berita.lima figure {
+    width: 13rem;
   }
 }
 
