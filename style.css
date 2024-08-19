@@ -421,6 +421,27 @@ header #hamburger:hover {
   transform: scale(1.2);
 }
 
+.wadah-galeri figure::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.662) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.wadah-galeri figure:hover::after {
+  left: 100%;
+}
+
 .wadah-galeri figure figcaption {
   position: absolute;
   bottom: -1.2rem;
@@ -433,6 +454,61 @@ header #hamburger:hover {
   font-style: italic;
   font-size: 0.7rem;
   transition: 0.5s;
+}
+
+/* lokasi */
+#lokasi h2 {
+  opacity: 0;
+  text-align: center;
+  line-height: 5rem;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  span {
+    color: red;
+  }
+}
+
+#lokasi .wadah-lokasi {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2rem;
+  padding: 0 1rem;
+  flex-wrap: wrap;
+}
+
+.wadah-lokasi .peta {
+  width: 25rem;
+  height: 20rem;
+  box-shadow: 2px 2px 5px 2px black;
+}
+
+.wadah-lokasi .peta .map {
+  width: 100%;
+  height: 100%;
+}
+
+#lokasi .profil {
+  box-shadow: 4px 4px 5px black;
+  height: 100%;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  h3 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+    span {
+      color: rgb(0, 95, 86);
+      font-size: 1.5rem;
+    }
+  }
+
+  table {
+    font-weight: 500;
+    line-height: 2.3rem;
+    tr {
+      font-size: 1rem;
+    }
+  }
 }
 
 /* media queris */
@@ -500,6 +576,25 @@ header #hamburger:hover {
   .wadah-galeri figure figcaption {
     font-size: 0.6rem;
   }
+
+  .wadah-lokasi .peta {
+    width: 19rem;
+    height: 14rem;
+  }
+
+  #lokasi .profil h3 {
+    font-size: 1rem;
+    span {
+      font-size: 1.4rem;
+    }
+  }
+
+  #lokasi .profil table {
+    line-height: 1.5rem;
+    tr {
+      font-size: 0.8rem;
+    }
+  }
 }
 
 @media screen and (max-width: 575px) {
@@ -555,7 +650,8 @@ header #hamburger:hover {
     font-size: 0.9rem;
   }
 
-  #galeri h2 {
+  #galeri h2,
+  #lokasi h2 {
     font-size: 0.9rem;
     line-height: 4rem;
   }
@@ -580,6 +676,25 @@ header #hamburger:hover {
 
   .wadah-galeri figure figcaption {
     font-size: 0.5rem;
+  }
+
+  .wadah-lokasi .peta {
+    width: 15rem;
+    height: 10rem;
+  }
+
+  #lokasi .profil h3 {
+    font-size: 0.9rem;
+    span {
+      font-size: 1.3rem;
+    }
+  }
+
+  #lokasi .profil table {
+    line-height: 1rem;
+    tr {
+      font-size: 0.7rem;
+    }
   }
 }
 
@@ -730,7 +845,8 @@ header #hamburger:hover {
     font-size: 0.8rem;
   }
 
-  #galeri h2 {
+  #galeri h2,
+  #lokasi h2 {
     font-size: 0.8rem;
     line-height: 3rem;
   }
@@ -754,6 +870,22 @@ header #hamburger:hover {
 
   #galeri .wadah-galeri {
     grid-template-columns: repeat(auto-fit, 9rem);
+  }
+
+  .wadah-lokasi .peta {
+    width: 13rem;
+    height: 8rem;
+  }
+
+  #lokasi .profil h3 {
+    font-size: 0.8rem;
+    span {
+      font-size: 1.2rem;
+    }
+  }
+
+  #lokasi .profil table tr {
+    font-size: 0.6rem;
   }
 }
 
@@ -818,7 +950,8 @@ header #hamburger:hover {
     font-size: 0.7rem;
   }
 
-  #galeri h2 {
+  #galeri h2,
+  #lokasi h2 {
     font-size: 0.7rem;
     line-height: 2rem;
   }
