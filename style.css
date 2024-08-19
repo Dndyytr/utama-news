@@ -377,7 +377,62 @@ header #hamburger:hover {
 .berita .isi-berita {
   box-shadow: 4px 5px 5px black;
   border-radius: 0.5rem;
-  padding: 0.5rem 1rem;
+  padding: 0.6rem;
+}
+
+/* galeri */
+#galeri h2 {
+  text-align: center;
+  line-height: 5rem;
+  font-size: 1.2rem;
+  opacity: 0;
+  span {
+    color: red;
+  }
+}
+
+#galeri .wadah-galeri {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 20rem);
+  gap: 2rem;
+  justify-content: center;
+  padding: 0 1rem;
+}
+
+.wadah-galeri figure {
+  overflow: hidden;
+  box-shadow: 4px 4px 5px 1px black;
+  display: flex;
+  position: relative;
+}
+
+.wadah-galeri figure:hover figcaption {
+  bottom: 0;
+}
+
+.wadah-galeri figure img {
+  width: 100%;
+  object-fit: cover;
+  transition: 0.5s;
+  filter: contrast(1.1);
+}
+
+.wadah-galeri figure img:hover {
+  transform: scale(1.2);
+}
+
+.wadah-galeri figure figcaption {
+  position: absolute;
+  bottom: -1.2rem;
+  background-color: rgba(0, 0, 0, 0.632);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  width: 100%;
+  color: white;
+  text-align: center;
+  font-style: italic;
+  font-size: 0.7rem;
+  transition: 0.5s;
 }
 
 /* media queris */
@@ -437,6 +492,14 @@ header #hamburger:hover {
   #artikel .berita p {
     font-size: 0.7rem;
   }
+
+  #galeri .wadah-galeri {
+    grid-template-columns: repeat(auto-fit, 17rem);
+  }
+
+  .wadah-galeri figure figcaption {
+    font-size: 0.6rem;
+  }
 }
 
 @media screen and (max-width: 575px) {
@@ -492,6 +555,11 @@ header #hamburger:hover {
     font-size: 0.9rem;
   }
 
+  #galeri h2 {
+    font-size: 0.9rem;
+    line-height: 4rem;
+  }
+
   #artikel .berita {
     flex-direction: column;
 
@@ -504,6 +572,14 @@ header #hamburger:hover {
   #artikel .berita.tiga figure,
   #artikel .berita.lima figure {
     width: 20rem;
+  }
+
+  #galeri .wadah-galeri {
+    grid-template-columns: repeat(auto-fit, 12.5rem);
+  }
+
+  .wadah-galeri figure figcaption {
+    font-size: 0.5rem;
   }
 }
 
@@ -566,6 +642,23 @@ header #hamburger:hover {
 
   #artikel .berita p {
     font-size: 0.6rem;
+  }
+
+  #galeri .wadah-galeri {
+    grid-template-columns: repeat(auto-fit, 10rem);
+  }
+
+  .wadah-galeri figure figcaption {
+    font-size: 0.4rem;
+  }
+}
+
+@media screen and (max-width: 384px) {
+  #galeri .wadah-galeri {
+    grid-template-columns: repeat(auto-fit, 9.29rem);
+  }
+  .wadah-galeri figure figcaption {
+    font-size: 0.35rem;
   }
 }
 
@@ -637,6 +730,11 @@ header #hamburger:hover {
     font-size: 0.8rem;
   }
 
+  #galeri h2 {
+    font-size: 0.8rem;
+    line-height: 3rem;
+  }
+
   #artikel .berita figure {
     width: 15rem;
   }
@@ -653,7 +751,12 @@ header #hamburger:hover {
   #artikel .berita p {
     font-size: 0.5rem;
   }
+
+  #galeri .wadah-galeri {
+    grid-template-columns: repeat(auto-fit, 9rem);
+  }
 }
+
 @media screen and (max-width: 320px) {
   header nav li {
     font-size: 0.75rem;
@@ -713,6 +816,11 @@ header #hamburger:hover {
 
   #artikel h2 {
     font-size: 0.7rem;
+  }
+
+  #galeri h2 {
+    font-size: 0.7rem;
+    line-height: 2rem;
   }
 
   #artikel .berita figure {
