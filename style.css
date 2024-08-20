@@ -145,7 +145,7 @@ header #hamburger:hover {
   visibility: hidden;
   background-color: rgba(0, 0, 0, 0.687);
   padding: 0.1rem 0.5rem;
-  border-radius: 0.5rem;
+  border-radius: 0.3rem;
   font-size: 0.9rem;
   -webkit-backdrop-filter: blur(2px);
   backdrop-filter: blur(2px);
@@ -475,6 +475,7 @@ header #hamburger:hover {
   padding: 1rem;
   flex-wrap: wrap;
   box-shadow: 2px 2px 5px 1px black;
+  border-radius: 3px;
   margin: 0 1rem;
 }
 
@@ -547,10 +548,11 @@ footer .konten {
     margin-bottom: 0.5rem;
     width: 40%;
     box-shadow: 2px 2px 5px black;
+    border-radius: 3px;
   }
 
   .kontak p {
-    color: rgb(26, 26, 26);
+    color: rgb(28, 28, 28);
   }
 }
 
@@ -576,6 +578,7 @@ footer .link h3,
 footer .follow h3 {
   font-size: 1rem;
   box-shadow: 2px 2px 5px black;
+  border-radius: 3px;
   margin-bottom: 0.5rem;
   width: 110%;
 }
@@ -585,12 +588,12 @@ footer .follow h3 {
   font-size: 0.8rem;
   font-weight: 600;
   a {
-    color: rgb(26, 26, 26);
+    color: rgb(28, 28, 28);
   }
 }
 .follow a {
   font-size: 1.5rem;
-  color: rgb(26, 26, 26);
+  color: rgb(28, 28, 28);
 }
 
 footer hr {
