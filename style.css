@@ -472,14 +472,16 @@ header #hamburger:hover {
   display: flex;
   justify-content: space-evenly;
   gap: 2rem;
-  padding: 0 1rem;
+  padding: 1rem;
   flex-wrap: wrap;
+  box-shadow: 2px 2px 5px 1px black;
+  margin: 0 1rem;
 }
 
 .wadah-lokasi .peta {
   width: 25rem;
   height: 20rem;
-  box-shadow: 2px 2px 5px 2px black;
+  box-shadow: 0 0 5px 2px black;
 }
 
 .wadah-lokasi .peta .map {
@@ -488,9 +490,7 @@ header #hamburger:hover {
 }
 
 #lokasi .profil {
-  box-shadow: 4px 4px 5px black;
   height: 100%;
-  border-radius: 0.5rem;
   padding: 0.5rem;
   h3 {
     text-align: center;
@@ -509,6 +509,95 @@ header #hamburger:hover {
       font-size: 1rem;
     }
   }
+}
+
+/* footer */
+footer {
+  background-color: rgb(211, 211, 211);
+  margin-top: 2rem;
+  box-shadow: -5px 0 5px 2px black;
+  .copy {
+    text-align: center;
+    line-height: 2rem;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+}
+
+footer .wadah-footer {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+
+footer .konten {
+  width: 19rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-align: justify;
+  .warning {
+    color: red;
+    font-size: 1rem;
+  }
+  .kontak h3 {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    width: 40%;
+    box-shadow: 2px 2px 5px black;
+  }
+
+  .kontak p {
+    color: rgb(26, 26, 26);
+  }
+}
+
+footer figure {
+  width: 7rem;
+  img {
+    width: 100%;
+    object-fit: cover;
+    box-shadow: 2px 2px 5px black;
+  }
+}
+
+footer .link,
+footer .follow {
+  margin-left: 3rem;
+
+  a:hover {
+    color: red;
+  }
+}
+
+footer .link h3,
+footer .follow h3 {
+  font-size: 1rem;
+  box-shadow: 2px 2px 5px black;
+  margin-bottom: 0.5rem;
+  width: 110%;
+}
+
+.link li {
+  list-style: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  a {
+    color: rgb(26, 26, 26);
+  }
+}
+.follow a {
+  font-size: 1.5rem;
+  color: rgb(26, 26, 26);
+}
+
+footer hr {
+  border: 1px solid black;
+  width: 97%;
+  margin: auto;
+  box-shadow: 0 0 5px black;
 }
 
 /* media queris */
@@ -696,6 +785,34 @@ header #hamburger:hover {
       font-size: 0.7rem;
     }
   }
+
+  footer figure {
+    width: 6rem;
+  }
+
+  footer .konten {
+    font-size: 0.6rem;
+    .warning {
+      font-size: 0.8rem;
+    }
+    .kontak h3 {
+      font-size: 0.8rem;
+      width: 30%;
+    }
+  }
+
+  footer .link h3,
+  footer .follow h3,
+  footer .copy {
+    font-size: 0.8rem;
+  }
+
+  .link li {
+    font-size: 0.6rem;
+  }
+  .follow a {
+    font-size: 1.3rem;
+  }
 }
 
 @media screen and (max-width: 470px) {
@@ -765,6 +882,35 @@ header #hamburger:hover {
 
   .wadah-galeri figure figcaption {
     font-size: 0.4rem;
+  }
+
+  footer figure {
+    width: 3.5rem;
+  }
+
+  footer .konten {
+    font-size: 0.4rem;
+    flex-basis: 77%;
+    .warning {
+      font-size: 0.6rem;
+    }
+    .kontak h3 {
+      font-size: 0.6rem;
+      width: 30%;
+    }
+  }
+
+  footer .link h3,
+  footer .follow h3,
+  footer .copy {
+    font-size: 0.6rem;
+  }
+
+  .link li {
+    font-size: 0.4rem;
+  }
+  .follow a {
+    font-size: 1.1rem;
   }
 }
 
