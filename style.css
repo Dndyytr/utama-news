@@ -544,7 +544,7 @@ footer .konten {
   }
   .kontak h3 {
     font-size: 1rem;
-    margin-top: 0.5rem;
+    margin-top: 0.2rem;
     margin-bottom: 0.5rem;
     width: 40%;
     box-shadow: 2px 2px 5px black;
@@ -892,7 +892,7 @@ footer hr {
   }
 
   footer .konten {
-    font-size: 0.4rem;
+    font-size: 0.5rem;
     flex-basis: 77%;
     .warning {
       font-size: 0.6rem;
@@ -910,7 +910,7 @@ footer hr {
   }
 
   .link li {
-    font-size: 0.4rem;
+    font-size: 0.5rem;
   }
   .follow a {
     font-size: 1.1rem;
